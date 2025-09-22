@@ -93,6 +93,10 @@ alias git-merge='git merge master'
 # Pull latest master and return to current branch
 alias git-pull='git checkout master && git pull origin master && git checkout -'
 
+# Delete a branch locally and remotely
+alias git-delete-branch='f() { git branch -d $1 && git push origin --delete $1; }; f'
+
+
 
 # Disable touchpad
 alias touchpad-off='echo "i2c-ASUP1301:00" | sudo tee /sys/bus/i2c/drivers/i2c_hid_acpi/unbind && notify-send "🌙 Touchpad Disabled" "Your gestures are now at rest."'
