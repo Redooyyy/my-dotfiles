@@ -81,13 +81,24 @@ git-update() {
   git push
 }
 
+# Switch branch
+alias git-switch='git checkout'
+
+# Create new branch and switch
+alias git-cswitch='git checkout -b'
+
+# Merge master into current branch
+alias git-merge='git merge master'
+
+# Pull latest master and return to current branch
+alias git-pull='git checkout master && git pull origin master && git checkout -'
+
+
 # Disable touchpad
 alias touchpad-off='echo "i2c-ASUP1301:00" | sudo tee /sys/bus/i2c/drivers/i2c_hid_acpi/unbind && notify-send "🌙 Touchpad Disabled" "Your gestures are now at rest."'
 
 # Enable touchpad
 alias touchpad-on='echo "i2c-ASUP1301:00" | sudo tee /sys/bus/i2c/drivers/i2c_hid_acpi/bind && notify-send "🌞 Touchpad Enabled" "Your gestures have returned."'
-
-
 
 # Download best quality video
 alias ytbest='yt-dlp -f "bestvideo+bestaudio/best" -o "~/Videos/%(title)s.%(ext)s"'
