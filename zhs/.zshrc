@@ -119,5 +119,6 @@ alias ytplaylist='yt-dlp -o "~/Videos/%(playlist_title)s/%(title)s.%(ext)s"'
 # Instagram / generic site downloader (same command works)
 alias igdl='yt-dlp -o "~/Videos/Instagram/%(title)s.%(ext)s"'
 
-
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+export PATH=$JAVA_HOME/bin:$PATH
 
